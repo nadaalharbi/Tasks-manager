@@ -2,9 +2,8 @@ const validate = require('validator');
 const mongoose = require('mongoose');
 const { default: validator } = require('validator');
 
-
-//Create a mongoose model in real-life such as user, task ..etc
-// each model will objects(name) with a type-property pairs
+// Crate a User model with four prop. name, email, password and age.
+// Each model will have objects with a type-property pairs
 const User = mongoose.model('User', {
     name: {
         type: String,

@@ -22,7 +22,6 @@ router.get('/tasks', (req, res) => {
     }).catch((error) => {
         res.status(500).send(error);
     });
-
 });
 
 // Get task by id 
@@ -62,13 +61,13 @@ router.patch('/tasks/:id', (req, res) => {
 });
 
 //DELETE
-router.delete('/tasks/:id', (req,res)=>{
-    Tasks.findByIdAndDelete(req.params.id).then((task)=>{
-        if(!task){
+router.delete('/tasks/:id', (req, res) => {
+    Tasks.findByIdAndDelete(req.params.id).then((task) => {
+        if (!task) {
             return res.status(404).send();
         }
         res.send(task);
-    }).catch((error)=>{
+    }).catch((error) => {
         res.status(500).send();
     });
 });
@@ -99,4 +98,3 @@ deleteTaskAndCount('5f04e29f41f3250630499a05').then((result) => {
 
 
 module.exports = router
-

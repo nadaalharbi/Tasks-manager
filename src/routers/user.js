@@ -14,7 +14,7 @@ router.post('/users', (req, res) => {
         //send 201 code that's the request has been fulfilled!
         res.status(201).send(user);
     }).catch((error) => {
-        console.log('Failed saving user');
+        console.log('Failed saving a user');
         res.statusCode(400).send(error);
     });
 });
@@ -85,8 +85,6 @@ router.delete('/users/:id', (req, res) => {
         res.status(500).send();
     });
 });
-
-
 
 
 //find user with id then updage its age
